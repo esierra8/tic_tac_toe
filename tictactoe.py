@@ -5,6 +5,10 @@
 #05/20/17
 
 
+#Future improvements:
+#-Being able to play against a computer
+
+
 # Creating a row
 def format_row(row):
   return  '|'.join('{0:^3}'.format(x) for x in row)
