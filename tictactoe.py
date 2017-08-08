@@ -6,7 +6,7 @@
 
 
 #Future improvements:
-#
+###
 #-Being able to play against a computer
 
 
