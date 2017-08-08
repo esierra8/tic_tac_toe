@@ -6,8 +6,7 @@
 
 
 #Future improvements:
-###
-#-Being able to play against a computer
+# -Being able to play against a computer
 
 
 # Creating a row
