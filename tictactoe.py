@@ -68,7 +68,7 @@ board = [' ' ,' ' ,' ' ,' ' ,' ' ,' ' ,' ',' ' ,' ']
 player1 = 'X'
 player2 = 'O'
 
-
+#Main while loop that runs the game in here
 #For Python 2.7 use raw_input instead of input)
 while not won:
   print('Player 1\tPlayer 2')
