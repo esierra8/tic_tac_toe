@@ -1,13 +1,22 @@
+#This is one of my first programs in python. It is a simple tic tac toe game with the design hardcoded.
+#It will create a board and it will alternate between two players taking turns until one of the win
+#   or they tie.
+#Esteban Sierra
+#05/20/17
 
+
+# Creating a row
 def format_row(row):
   return  '|'.join('{0:^3}'.format(x) for x in row)
 
+#Creating the board
 def format_board(board):
   # for a single list with 9 elements uncomment the following line:
   return '\n\n'.join(format_row(row) for row in zip(*[iter(board) ] *3))
   # for a 3x3 list:
   # return '\n\n'.join(format_row(row) for row in board)
 
+#Check if a player has won by going through patterns
 def check_4win(player):
   if board[0] == board[1] == board[2]==player:
     print( player+' won')
@@ -34,6 +43,7 @@ def check_4win(player):
     print( player+' won')
     return True
 
+#Clean the baord
 def clean_board(board):
   for cell in board:
     cell = ' '
@@ -58,6 +68,8 @@ board = [' ' ,' ' ,' ' ,' ' ,' ' ,' ' ,' ',' ' ,' ']
 player1 = 'X'
 player2 = 'O'
 
+
+#For Python 2.7 use raw_input instead of input)
 while not won:
   print('Player 1\tPlayer 2')
   if(turn%2 !=0 ):
@@ -83,29 +95,3 @@ while not won:
       board = empty_board
   turn +=1
 
-
-#--------Python 2.7 (Raw input instead of input)
-# while not won:
-#   print('Player 1\tPlayer 2')
-#   if(turn%2 !=0 ):
-#
-#     print('********')
-#     print(format_board(board))
-#     cell_selected = int(raw_input('Your pick: '))
-#     if board[cell_selected-1] == ' ':
-#       board[cell_selected-1] = player1
-#     won = check_4win(player1)
-#   else:
-#     print('\t\t\t********')
-#     print(format_board(board))
-#     cell_selected = int(raw_input('Which cell you want to mark?'))
-#     if board[cell_selected-1] == ' ':
-#       board[cell_selected-1] = player2
-#     won = check_4win(player2)
-#   if won:
-#     print (format_board(board))
-#     play_again = raw_input('Do you wish to play again? (y/n)')
-#     if play_again == 'y':
-#       won = False
-#       board = empty_board
-#   turn +=1
