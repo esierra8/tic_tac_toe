@@ -1,6 +1,8 @@
 #This is one of my first programs in python. It is a simple tic tac toe game with the design hardcoded.
 #It will create a board and it will alternate between two players taking turns until one of the win
 #   or they tie.
+
+
 #Esteban Sierra
 #05/20/17
 
