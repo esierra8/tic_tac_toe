@@ -72,6 +72,7 @@ player2 = 'O'
 #For Python 2.7 use raw_input instead of input)
 while not won:
   print('Player 1\tPlayer 2')
+  #This will keep taking turns with players
   if(turn%2 !=0 ):
 
     print('********')
